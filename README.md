@@ -18,7 +18,21 @@ Make sure you have a public server, for example at 1.2.3.4, and run this:
 
     docker run -d -v "$(pwd)":/var/www/html -p 9999:80 php:apache
 
-Make sure the following URLs return:
+Make sure the following URLs return valid info:
 
 * http://1.2.3.4:9999/?source=https%3A%2F%2Fapi.openaq.org%2Fv1%2Fcities
-* http://1.2.3.4:9999/?source=https://swapi.co/api/people/%3Fformat=json
+* http://1.2.3.4:9999/?source=https://swapi.co/api/people/?_format=json
+
+Go to your Redash app and add a new URL data source with base path http://1.2.3.4:9999/
+
+Create a new query "Star Wars Characters" with:
+
+* index.php?source=https%3A%2F%2Fapi.openaq.org%2Fv1%2Fcities
+
+Create a new query "Cities with air quality info" with:
+
+* index.php?source=https%3A%2F%2Fswapi.co%2Fapi%2Fpeople%2F%3F_format%3Djson
+
+**Make sure you URL encode the source, or Redash will not accept your queries**.
+
+Create a dashboard with these two data sources.
