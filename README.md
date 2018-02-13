@@ -14,6 +14,11 @@ This is what this project attempts to do.
 Usage
 -----
 
-Make sure you have a public server, and run this:
+Make sure you have a public server, for example at 1.2.3.4, and run this:
 
     docker run -d -v "$(pwd)":/var/www/html -p 9999:80 php:apache
+
+Make sure the following URLs return:
+
+* http://1.2.3.4:9999/?source=https%3A%2F%2Fapi.openaq.org%2Fv1%2Fcities
+* http://1.2.3.4:9999/?source=https://swapi.co/api/people/%3Fformat=json

@@ -9,4 +9,4 @@ require_once 'autoload.php';
 
 use myproject\App;
 
-App::instance()->run($_GET);
+print(App::instance()->run($_GET));
