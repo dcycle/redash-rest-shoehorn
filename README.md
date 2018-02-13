@@ -36,3 +36,5 @@ Create a new query "Cities with air quality info" with:
 **Make sure you URL encode the source, or Redash will not accept your queries**.
 
 Create a dashboard with these two data sources.
+
+<img src="https://raw.githubusercontent.com/dcycle/redash-rest-shoehorn/master/images/sample.jpg" alt="A look at how the Redash looks with two REST datasources"/>
